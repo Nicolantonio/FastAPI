@@ -40,6 +40,3 @@ async def process_websocket(websocket: WebSocket):
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
     await process_websocket(websocket)
-
-if __name__ == '__main__':
-    uvicorn.run("fastApi:app", host='0.0.0.0', port=8000,  workers=4)
